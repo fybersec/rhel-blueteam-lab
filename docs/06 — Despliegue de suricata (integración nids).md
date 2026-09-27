@@ -155,13 +155,6 @@ sudo systemctl status wazuh-agent
 
 <p align="center"> <img src="https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/06-Suricata/5.png" width="600"> </p>
 
-## Emulación de ataque (verificación funcional)
-
-```bash
-ping -c 5 <IP_DEL_SERVIDOR>
-```
-
-
 > **Nota de red:** el `HOME_NET` apunta a la IP del servidor sobre la interfaz `ens160` (red LAN/bridged del lab). El tráfico de prueba debe originarse desde un host que efectivamente llegue por esa interfaz — el tráfico interno de las redes Docker del propio host (`172.17.0.0/16`, `172.18.0.0/16`, usadas por el stack de `04-despliegue-wazuh-docker.md`) no es representativo de un ataque externo real.
 
 ## Verificación post-instalación
