@@ -23,6 +23,8 @@ Antes de avanzar con el despliegue del stack de detección, se necesita una form
 ## Instalación
 
 
-<p align="center"> <img src="[imagen de la instalacion](https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/02-Tailscale/1.png)" width="600"> </p>
-<p align="center"> <img src="[imagen de la instalacion](https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/02-Tailscale/2.png)" width="600"> </p>
-<p align="center"> <img src="[imagen de la instalacion](https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/02-Tailscale/3.png)" width="600"> </p>
+<p align="center"> <img src="https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/02-Tailscale/1.png" width="600"> </p>
+
+<p align="center"> <img src="https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/02-Tailscale/2.png" width="600"> </p>
+
+<p align="center"> <img src="https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/02-Tailscale/3.png" width="600"> </p>
