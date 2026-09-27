@@ -78,9 +78,10 @@ sudo dnf install -y php-cli php-curl php-mbstring php-xml php-gd
 
 <p align="center"> <img src="https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/07-Webapp/1.png" width="600"> </p>
 <p align="center"> <img src="https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/07-Webapp/2.png" width="600"> </p>
+
 ## Base de datos (MariaDB)
 
-	A diferencia de MySQL Server de Oracle (usado en la guía de referencia para Ubuntu), MariaDB en RHEL no requiere el ajuste de `plugin='mysql_native_password'` para que la autenticación por contraseña funcione, aunque tampoco genera error si se ejecuta.
+A diferencia de MySQL Server de Oracle (usado en la guía de referencia para Ubuntu), MariaDB en RHEL no requiere el ajuste de `plugin='mysql_native_password'` para que la autenticación por contraseña funcione, aunque tampoco genera error si se ejecuta.
 
 ```bash
 sudo mysql -u root
