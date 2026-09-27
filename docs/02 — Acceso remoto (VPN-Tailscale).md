@@ -16,9 +16,9 @@ Antes de avanzar con el despliegue del stack de detección, se necesita una form
 
 ## Alcance de este cambio
 
-- **Qué cambia:** se agrega una interfaz de red virtual (Tailscale) sobre el servidor RHEL y sobre las máquinas de administración remota y del colaborador.
+- **Qué cambia:** se agrega una interfaz de red virtual (Tailscale) sobre el servidor RHEL y sobre las máquinas de administración remota.
 - **Qué NO cambia:** la red bridged/LAN local definida en `01-preparacion-servidor.md` sigue existiendo para el tráfico entre el servidor, Kali y el resto del lab durante los escenarios de ataque (que se siguen ejecutando sin salida a internet, como ya está documentado).
-- **Separación de tráficos:** Tailscale se usa exclusivamente para **administración remota** (acceso SSH del colaborador, revisión de dashboards). El tráfico de los escenarios de ataque (`attack-scenarios/`) sigue corriendo de forma aislada, sin pasar por la VPN.
+- **Separación de tráficos:** Tailscale se usa exclusivamente para **administración remota** (acceso SSH, revisión de dashboards). El tráfico de los escenarios de ataque (`attack-scenarios/`) sigue corriendo de forma aislada, sin pasar por la VPN.
 
 ## Instalación
 
