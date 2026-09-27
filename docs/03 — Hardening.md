@@ -24,7 +24,7 @@ Servicios que vienen habilitados por defecto en RHEL pero que no forman parte de
 |---|---|---|---|---|
 |CUPS|631|Gestión de impresoras|El lab no imprime ni gestiona impresoras; un puerto abierto sin uso es riesgo innecesario.|Eliminado|
 |Rpcbind|111|Mapeo de programas RPC (usado por NFS)|No se comparten archivos por NFS en este entorno.|Eliminado|
-<p align="center"> <img src="[puertos_Antes](https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/03-hardening/2.png)" width="600"> </p>
+<p align="center"> <img src="https://github.com/fybersec/rhel-blueteam-lab/blob/main/screenshots-videos/assets/03-hardening/2.png" width="600"> </p>
 
 1. Eliminar el servicio CUPS (Puerto 631)
 ```
