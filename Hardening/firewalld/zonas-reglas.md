@@ -5,7 +5,7 @@ El criterio de este documento **no es "máxima seguridad"**, sino coherencia con
 Por eso, `firewalld` se configura acá con un modelo de **zonas por origen de confianza**, no de "todo cerrado salvo lo mínimo". La regla general:
 
 - Tráfico desde la **red LAN del lab** (donde están Kali y la máquina de administración) → permitido de forma amplia, porque es precisamente el tráfico que se quiere generar y observar.
-- Tráfico desde **Tailscale** (administración remota, `02-acceso-remoto-vpn-tailscale.md`) → permitido solo para lo que es genuinamente administración (SSH, dashboard), no para los servicios vulnerables a propósito.
+- Tráfico desde **Tailscale** (administración remota, `acceso-remoto-vpn-tailscale`) → permitido solo para lo que es genuinamente administración (SSH, dashboard), no para los servicios vulnerables a propósito.
 - Cualquier otro origen → zona por defecto, sin servicios expuestos.
 
 ## Por qué zonas por interfaz (y no reglas sueltas con `iptables`/`nftables` directo)
@@ -64,10 +64,10 @@ sudo firewall-cmd --zone=internal --add-port=8080/tcp --permanent
 
 |Puerto/Servicio|Protocolo|Uso|Justificación|
 |---|---|---|---|
-|22 (ssh)|TCP|Acceso remoto del colaborador|Ya cubierto por el hardening SSH; sigue aplicando igual sobre Tailscale (`02-acceso-remoto-vpn-tailscale.md`).|
+|22 (ssh)|TCP|Acceso remoto del colaborador|Ya cubierto por el hardening SSH; sigue aplicando igual sobre Tailscale (`acceso-remoto-vpn-tailscale`).|
 |443|TCP|Dashboard de Wazuh|El colaborador necesita revisar alertas sin estar en la LAN física.|
 
-**Deliberadamente NO se expone acá:** 8080 (Mutillidae) ni 1514/1515. El tráfico de ataque documentado en `attack-scenarios/` se ejecuta desde la LAN local, sin pasar por la VPN (así quedó definido en `02-acceso-remoto-vpn-tailscale.md`) — exponer el objetivo vulnerable también sobre Tailscale no aporta nada al lab y sí amplía innecesariamente la superficie de la VPN.
+**Deliberadamente NO se expone acá:** 8080 (Mutillidae) ni 1514/1515. El tráfico de ataque documentado en `attack-scenarios/` se ejecuta desde la LAN local, sin pasar por la VPN (así quedó definido en `acceso-remoto-vpn-tailscale`) — exponer el objetivo vulnerable también sobre Tailscale no aporta nada al lab y sí amplía innecesariamente la superficie de la VPN.
 
 ```bash
 sudo firewall-cmd --zone=trusted-vpn --add-service=ssh --permanent
