@@ -53,9 +53,6 @@ ClientAliveCountMax 2
 sudo sshd -t                      # valida sintaxis antes de reiniciar
 sudo systemctl restart sshd
 ```
-
-> **Práctica de seguridad recomendada:** antes de cerrar la sesión actual, abrir una **segunda** conexión SSH nueva para confirmar que el acceso por clave funciona con la configuración ya aplicada. Si algo falla, la sesión original sigue abierta para revertir sin necesidad de recurrir a la consola de VMware. Esta es la misma lógica de "no romper lo que ya funciona" detrás del snapshot recomendado en `01-preparacion-servidor.md`.
-
 ## Verificación post-hardening
 
 - [ ] `sudo sshd -t` no reporta errores de sintaxis.
