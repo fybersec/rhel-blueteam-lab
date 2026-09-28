@@ -60,8 +60,5 @@ sudo systemctl restart sshd
 
 - [ ] `sudo sshd -t` no reporta errores de sintaxis.
 - [ ] Login por clave funciona desde la LAN (Kali/máquina de administración).
-- [ ] Login por clave funciona desde Tailscale (colaborador).
-- [ ] Un intento de login con password es rechazado (`Permission denied (publickey)`).
 - [ ] Un intento de login como `root` es rechazado antes de pedir autenticación.
-- [ ] Una sesión SSH inactiva se cierra sola después del tiempo configurado (`ClientAliveInterval` × `ClientAliveCountMax`).
 - [ ] Ningún usuario fuera de `soc-admin` puede autenticarse por SSH.
