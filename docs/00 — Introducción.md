@@ -47,7 +47,7 @@ El laboratorio corre sobre una única máquina virtual RHEL 8.10. Dentro de ella
 
 - Entornos multi-nodo o distribuidos.
 - Cobertura completa de MITRE ATT&CK (se documentan técnicas puntuales, no la matriz entera).
-- Hardening o compliance certificado (no reemplaza un benchmark formal como CIS).
+- Hardening o compliance certificado.
 
 ## Cómo navegar el repo
 
