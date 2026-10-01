@@ -168,11 +168,6 @@ Listen 8080
 SELinix no permite por defecto que `httpd` escuche en puertos fuera de su lista autorizada (`http_port_t`). Este paso es específico de RHEL y no tiene equivalente en la guía de Ubuntu:
 
 ```bash
-sudo semanage port -l | grep http_port_t
-sudo semanage port -a -t http_port_t -p tcp 8080
-```
-
-```bash
 sudo firewall-cmd --permanent --add-port=8080/tcp
 sudo firewall-cmd --reload
 sudo systemctl restart httpd
