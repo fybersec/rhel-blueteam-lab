@@ -22,7 +22,7 @@ PermitRootLogin no
 PasswordAuthentication yes #Con el fin de en /attacks-scenarios poder hacer fuerza bruta al ssh(22)
 PubkeyAuthentication yes
 PermitEmptyPasswords no
-AuthenticationMethods publickey
+#AuthenticationMethods publickey
 
 # Superficie de ataque
 MaxAuthTries 3
